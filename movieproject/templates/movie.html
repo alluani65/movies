@@ -1,0 +1,10 @@
+{%extends 'base.html'%}
+{%block body%}
+<img src="{{a.img.url}}" width=250 height=250><br>
+{{a.name|default:'sorry'}}<br>
+{{a.des}}<br>
+ {{a.year}}<br>
+ <a class ='btn btn-wrap' href='{%url "movieapp:update" a.id%}'>update</a>
+ <a class ='btn btn-wrap' href="{%url 'movieapp:delete' a.id%}">delete</a>
+
+ {%endblock%}
